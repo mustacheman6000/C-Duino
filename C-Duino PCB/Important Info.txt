@@ -1,0 +1,18 @@
+The Build of Materials is from LCSC. 
+If you copy paste their BOM_Supplier Part number into the LCSC search bar, you should be able to find each part.
+If you can't find a specific part, almost all SMD components are 0603 and easily findeable from other sources.
+The labelled PCB should be used for assembly and the Gerber file is in ZIP format so it can be uploaded to your website of choice right away.
+When flashing the firmware, I found arduino over ISP works the best.
+Upload the arduinoISP sketch to your arduino uno and then connect the pins as follows
+
+	UNO	C-Duino
+Power	5V	VCC
+Ground	GND	GND
+SCK	13	15
+MISO	12	14
+MOSI	11	16
+Reset	10	RST
+
+Then burn the bootloader to your C-Duino.
+For more information, visit https://schou.dk/linux/arduino/isp/
+All the pins are the same on the C-Duino and follow the same flashing procedure.
